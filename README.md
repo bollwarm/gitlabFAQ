@@ -20,7 +20,6 @@ GitlabIP gitlab.xxoo
 
 然后浏览器用gitlab.xxoo访问，用户用root，并且任意8个字符登陆，然后修改密码。
 
-
 ## 源码安装 (一般没必要)
 （官方文档）[https://docs.gitlab.com/ce/install/installation.html]
 
@@ -59,14 +58,12 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
     gitlab-ctl reconfig
     gitlab-ctl restart
 
-
 注意gitlab任何配置都在主配置`/etc/gitlab/gitlab.rb`里面修改
 
 修改好gitlab-ctl reconfig 会自动生成各个部分的配置，不要单独去改其他部分的配置，
 比如为了修改web端口去修改nginx配置，那都是错误的方法，很多blog都是那样配的，
 那是完全错误的方法。reconfig就会丢掉。
 `
-
 # 1.gitlab 使用API批量创建分组和项目
 
 ##  创建分组
@@ -74,7 +71,6 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 创建一个文件，将分组名称写入，一行一个：
 
     vim group
-
 
 使用gitlab的API批量创建群组：
 
