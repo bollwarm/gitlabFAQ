@@ -1,3 +1,28 @@
+
+## 有用信息 & Url链接
+
+### 在线git教程
+
+(git简明教程)[http://rogerdudler.github.io/git-guide/]
+
+(图解Git)[http://marklodato.github.io/visual-git-guide/index-zh-cn.html#commands-in-detail]
+
+(Pro Git中文版)[https://book.git-scm.com/book/zh/v2]
+
+### gitlab链接
+
+gitlab-runner文档
+
+https://gitlab.com/gitlab-org/gitlab-runner/tree/master/docs
+
+Security安全文档
+
+https://gitlab.com/help/security/README.md
+
+gitlab 官网  www.gitlab.com
+
+gitlab QQ交流群 208598995
+
 ## gitlab安装和配置
 
 ### 安装gitlab （以centos 6 为例）
@@ -254,16 +279,10 @@ git_data_dir "/home/gitlab-data"
 
 则服务启动过程较慢，在此期间启动则会导致502，等一段时间，服务启动后，在访问就ok了
 
-## 其他信息 & Url链接
+## 其他信息
 
-gitlab-runner文档
+跟多信息欢迎(Pull Request)[https://github.com/bollwarm/gitlabFAQ]
 
-https://gitlab.com/gitlab-org/gitlab-runner/tree/master/docs
+gitlab QQ交流群 208598995,交流
 
-Security安全文档
-
-https://gitlab.com/help/security/README.md
-
-gitlab 官网  www.gitlab.com
-
-gitlab QQ交流群 208598995
+本repo会持续更新
