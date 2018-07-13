@@ -3,13 +3,17 @@
 
 ### 在线git教程
 
-(git简明教程)[http://rogerdudler.github.io/git-guide/]
+[git简明教程](http://rogerdudler.github.io/git-guide/)
 
-(图解Git)[http://marklodato.github.io/visual-git-guide/index-zh-cn.html#commands-in-detail]
+[图解Git](http://marklodato.github.io/visual-git-guide/index-zh-cn.html#commands-in-detail)
 
-(Pro Git中文版)[https://book.git-scm.com/book/zh/v2]
+[Pro Git中文版](https://book.git-scm.com/book/zh/v2)
 
 ### gitlab链接
+
+gitlab 官网  www.gitlab.com
+
+gitlab QQ交流群 208598995
 
 gitlab-runner文档
 
@@ -18,10 +22,6 @@ https://gitlab.com/gitlab-org/gitlab-runner/tree/master/docs
 Security安全文档
 
 https://gitlab.com/help/security/README.md
-
-gitlab 官网  www.gitlab.com
-
-gitlab QQ交流群 208598995
 
 ## gitlab安装和配置
 
@@ -35,22 +35,23 @@ gitlab QQ交流群 208598995
 
 #### yum安装
 
-sudo EXTERNAL_URL="http://gitlab.xxoo" yum -y install gitlab-ce
+    sudo EXTERNAL_URL="http://gitlab.xxoo" yum -y install gitlab-ce
 
 #### 首次访问 浏览器通过
 
 如果虚拟域名比如 gitlab.xxoo，在你访问机器hosts增加一行
 
-GitlabIP gitlab.xxoo
+    GitlabIP gitlab.xxoo
 
 然后浏览器用gitlab.xxoo访问，用户用root，并且任意8个字符登陆，然后修改密码。
 
-### 源码安装 (一般没必要)
-（官方文档）[https://docs.gitlab.com/ce/install/installation.html]
+### 源码安装 [一般没必要]
+
+https://docs.gitlab.com/ce/install/installation.html
 
 ### docker安装
 
-（官方文档）[https://docs.gitlab.com/ce/install/docker.html]
+https://docs.gitlab.com/ce/install/docker.html
 
 ### 典型的gitlab配置
 
@@ -68,9 +69,7 @@ gitlab_rails['smtp_enable_starttls_auto'] = true
 gitlab_rails['smtp_tls'] = true
 gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 ```
-说明：
-
-这就是几个需要自己配置的部分
+说明：这就是几个需要自己配置的部分
 
 第一个是url，那是显示在你gitlab页面链接那的url
 
@@ -101,8 +100,8 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 for i in `cat group`; do 
 
 echo $i": ";
-curl --request POST --header "PRIVATE-TOKEN: 9koXXXXOOOOOs5t"  --data "name=${i}&path=${i}" http://IPofgitlab/api/v4/groups;
-
+curl --request POST --header "PRIVATE-TOKEN: 9koXXXXOOOOOs5t" \
+ --data "name=${i}&path=${i}" http://IPofgitlab/api/v4/groups;
 done
 
 ```
@@ -118,17 +117,12 @@ vim repo
 
 ```
 for i in `cat repo`; do
-curl --request POST --header "PRIVATE-TOKEN: 9koXXXXOOOOOs5t"  --data "name=${i}&namespace_id=9" http://IPofgitlab/api/v4/projects;
+curl --request POST --header "PRIVATE-TOKEN: 9koXXXXOOOOOs5t" \
+  --data "name=${i}&namespace_id=9" http://IPofgitlab/api/v4/projects;
 done
 
 ```
 ## repo库迁移及批量创建gitlab库
-
-### 背景
-
-开发代码放置在外部git服务器，使用repo进行代码更新，由于代码量大、库多、公司网络环境等影响，从服务器获取整体代码速度缓慢，将借助jenkins及gitlab，在本地linux服务器创建repo版本库，将外部服务器代码整体保存到本地局域网服务器，编译开发时从本地服务器取得代码使用。
-
-### 实施
 
 ### 取得外部服务器的镜像库 （your_url 为外部库地址）
 
@@ -228,7 +222,7 @@ pro3 \
 
 gitlab代码数据默认目录：/var/opt/gitlab/git-data/repositories
 
-数据目录，挂一个大磁盘到目录(目录按照你的喜好命名)
+数据目录，挂一个大磁盘到目录[目录按照你的喜好命名]
 
 ````
 makedir  -p /data/gitlab-data
@@ -250,11 +244,11 @@ mount sdb  data/gitlab-data
 
 3、更改配置 /etc/gitlab/gitlab.rb
 
-vim /etc/gitlab/gitlab.rb
+    vim /etc/gitlab/gitlab.rb
 
 4、指定数据目录
 
-git_data_dir "/home/gitlab-data"
+    git_data_dir "/home/gitlab-data"
 
 5、 使配置生效
 
@@ -272,8 +266,8 @@ git_data_dir "/home/gitlab-data"
 
 原因：由于unicorn默认使用的是 8080 端口。
 
-解决办法：打开 /etc/gitlab/gitlab.rb ,
-去掉 # unicorn['port'] = 8080 的注释，将 8080 修改为 9090 ，保存后运行 sudo gitlab-ctl reconfigure 即可。
+解决办法：打开 /etc/gitlab/gitlab.rb ,去掉 # unicorn['port'] = 8080 的注释，
+将 8080 修改为 9090 ，保存后运行 sudo gitlab-ctl reconfigure 即可。
 
 如果内存较小，服务器硬件资源太小
 
@@ -281,7 +275,7 @@ git_data_dir "/home/gitlab-data"
 
 ## 其他信息
 
-跟多信息欢迎(Pull Request)[https://github.com/bollwarm/gitlabFAQ]
+跟多信息欢迎[Pull Request][https://github.com/bollwarm/gitlabFAQ]
 
 gitlab QQ交流群 208598995,交流
 
