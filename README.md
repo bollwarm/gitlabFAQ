@@ -1,40 +1,38 @@
-# gitlab°²×°ºÍÅäÖÃ
+## gitlabå®‰è£…å’Œé…ç½®
 
-## °²×°gitlab £¨ÒÔcentos 6 ÎªÀı£©
+### å®‰è£…gitlab ï¼ˆä»¥centos 6 ä¸ºä¾‹ï¼‰
 
-Ö»ĞèÒªÁ½²½£¬¹Ù·½ËµÃ÷µÄµÚÒ»²½Êµ¼ÊÉÏ¿ÉÒÔÊ¡ÂÔ£¬Èç¹ûºóÃæ·¢ÏÖÓĞÎÊÌâ£¬ÔÚyumÆäËûÒÀÀµ°ü£¬ÆäÊµÉÏÒÀÀµ°ü¶¼°²×°ÁË¡£
+åªéœ€è¦ä¸¤æ­¥ï¼Œå®˜æ–¹è¯´æ˜çš„ç¬¬ä¸€æ­¥å®é™…ä¸Šå¯ä»¥çœç•¥ï¼Œå¦‚æœåé¢å‘ç°æœ‰é—®é¢˜ï¼Œåœ¨yumå…¶ä»–ä¾èµ–åŒ…ï¼Œå…¶å®ä¸Šä¾èµ–åŒ…éƒ½å®‰è£…äº†ã€‚
 
-### Ìí¼Ógitlab yumÔ´
+#### æ·»åŠ gitlab yumæº
 
     curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
 
-### yum°²×°
+#### yumå®‰è£…
 
 sudo EXTERNAL_URL="http://gitlab.xxoo" yum -y install gitlab-ce
 
-### Ê×´Î·ÃÎÊ ä¯ÀÀÆ÷Í¨¹ı
+#### é¦–æ¬¡è®¿é—® æµè§ˆå™¨é€šè¿‡
 
-Èç¹ûĞéÄâÓòÃû±ÈÈç gitlab.xxoo£¬ÔÚÄã·ÃÎÊ»úÆ÷hostsÔö¼ÓÒ»ĞĞ
+å¦‚æœè™šæ‹ŸåŸŸåæ¯”å¦‚ gitlab.xxooï¼Œåœ¨ä½ è®¿é—®æœºå™¨hostså¢åŠ ä¸€è¡Œ
 
 GitlabIP gitlab.xxoo
 
-È»ºóä¯ÀÀÆ÷ÓÃgitlab.xxoo·ÃÎÊ£¬ÓÃ»§ÓÃroot£¬²¢ÇÒÈÎÒâ8¸ö×Ö·ûµÇÂ½£¬È»ºóĞŞ¸ÄÃÜÂë¡£
+ç„¶åæµè§ˆå™¨ç”¨gitlab.xxooè®¿é—®ï¼Œç”¨æˆ·ç”¨rootï¼Œå¹¶ä¸”ä»»æ„8ä¸ªå­—ç¬¦ç™»é™†ï¼Œç„¶åä¿®æ”¹å¯†ç ã€‚
 
-## Ô´Âë°²×° (Ò»°ãÃ»±ØÒª)
-£¨¹Ù·½ÎÄµµ£©[https://docs.gitlab.com/ce/install/installation.html]
+### æºç å®‰è£… (ä¸€èˆ¬æ²¡å¿…è¦)
+ï¼ˆå®˜æ–¹æ–‡æ¡£ï¼‰[https://docs.gitlab.com/ce/install/installation.html]
 
+### dockerå®‰è£…
 
-## docker°²×°
+ï¼ˆå®˜æ–¹æ–‡æ¡£ï¼‰[https://docs.gitlab.com/ce/install/docker.html]
 
-£¨¹Ù·½ÎÄµµ£©[https://docs.gitlab.com/ce/install/docker.html]
-
-## µäĞÍµÄgitlabÅäÖÃ
+### å…¸å‹çš„gitlabé…ç½®
 
 ```
 external_url 'http://git.YOUdomain'
 gitlab_rails['gitlab_shell_ssh_port'] = 8888
 nginx['listen_port'] = 5580
-
 gitlab_rails['smtp_enable'] = true
 gitlab_rails['smtp_address'] = "smtp.qq.com"
 gitlab_rails['smtp_port'] = 465
@@ -45,37 +43,36 @@ gitlab_rails['smtp_enable_starttls_auto'] = true
 gitlab_rails['smtp_tls'] = true
 gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 ```
-ËµÃ÷£º
+è¯´æ˜ï¼š
 
-Õâ¾ÍÊÇ¼¸¸öĞèÒª×Ô¼ºÅäÖÃµÄ²¿·Ö
+è¿™å°±æ˜¯å‡ ä¸ªéœ€è¦è‡ªå·±é…ç½®çš„éƒ¨åˆ†
 
-µÚÒ»¸öÊÇurl£¬ÄÇÊÇÏÔÊ¾ÔÚÄãgitlabÒ³ÃæÁ´½ÓÄÇµÄurl
+ç¬¬ä¸€ä¸ªæ˜¯urlï¼Œé‚£æ˜¯æ˜¾ç¤ºåœ¨ä½ gitlabé¡µé¢é“¾æ¥é‚£çš„url
 
-µÚ¶ş£¬Èı·Ö±ğÊÇĞèÒª×Ô¶¨ÒåµÄsshºÍweb¶Ë¿Ú
+ç¬¬äºŒï¼Œä¸‰åˆ†åˆ«æ˜¯éœ€è¦è‡ªå®šä¹‰çš„sshå’Œwebç«¯å£
 
-## ÅäÖÃÉúĞ§ºÍÖØÆô·şÎñ
+### é…ç½®ç”Ÿæ•ˆå’Œé‡å¯æœåŠ¡
 
     gitlab-ctl reconfig
     gitlab-ctl restart
 
-×¢ÒâgitlabÈÎºÎÅäÖÃ¶¼ÔÚÖ÷ÅäÖÃ`/etc/gitlab/gitlab.rb`ÀïÃæĞŞ¸Ä
+æ³¨æ„gitlabä»»ä½•é…ç½®éƒ½åœ¨ä¸»é…ç½®`/etc/gitlab/gitlab.rb`é‡Œé¢ä¿®æ”¹
 
-ĞŞ¸ÄºÃgitlab-ctl reconfig »á×Ô¶¯Éú³É¸÷¸ö²¿·ÖµÄÅäÖÃ£¬²»Òªµ¥¶ÀÈ¥¸ÄÆäËû²¿·ÖµÄÅäÖÃ£¬
-±ÈÈçÎªÁËĞŞ¸Äweb¶Ë¿ÚÈ¥ĞŞ¸ÄnginxÅäÖÃ£¬ÄÇ¶¼ÊÇ´íÎóµÄ·½·¨£¬ºÜ¶àblog¶¼ÊÇÄÇÑùÅäµÄ£¬
-ÄÇÊÇÍêÈ«´íÎóµÄ·½·¨¡£reconfig¾Í»á¶ªµô¡£
+ä¿®æ”¹å¥½gitlab-ctl reconfig ä¼šè‡ªåŠ¨ç”Ÿæˆå„ä¸ªéƒ¨åˆ†çš„é…ç½®ï¼Œä¸è¦å•ç‹¬å»æ”¹å…¶ä»–éƒ¨åˆ†çš„é…ç½®ï¼Œ
+æ¯”å¦‚ä¸ºäº†ä¿®æ”¹webç«¯å£å»ä¿®æ”¹nginxé…ç½®ï¼Œé‚£éƒ½æ˜¯é”™è¯¯çš„æ–¹æ³•ï¼Œå¾ˆå¤šblogéƒ½æ˜¯é‚£æ ·é…çš„ï¼Œ
+é‚£æ˜¯å®Œå…¨é”™è¯¯çš„æ–¹æ³•ã€‚reconfigå°±ä¼šä¸¢æ‰ã€‚
 `
-# 1.gitlab Ê¹ÓÃAPIÅúÁ¿´´½¨·Ö×éºÍÏîÄ¿
+## gitlab ä½¿ç”¨APIæ‰¹é‡åˆ›å»ºåˆ†ç»„å’Œé¡¹ç›®
 
-##  ´´½¨·Ö×é
+###  åˆ›å»ºåˆ†ç»„
 
-´´½¨Ò»¸öÎÄ¼ş£¬½«·Ö×éÃû³ÆĞ´Èë£¬Ò»ĞĞÒ»¸ö£º
+åˆ›å»ºä¸€ä¸ªæ–‡ä»¶ï¼Œå°†åˆ†ç»„åç§°å†™å…¥ï¼Œä¸€è¡Œä¸€ä¸ªï¼š
 
     vim group
 
-Ê¹ÓÃgitlabµÄAPIÅúÁ¿´´½¨Èº×é£º
+ä½¿ç”¨gitlabçš„APIæ‰¹é‡åˆ›å»ºç¾¤ç»„ï¼š
 
 ```
-
 for i in `cat group`; do 
 
 echo $i": ";
@@ -84,19 +81,15 @@ curl --request POST --header "PRIVATE-TOKEN: 9koXXXXOOOOOs5t"  --data "name=${i}
 done
 
 ```
+### åˆ›å»ºé¡¹ç›®
 
-## ´´½¨ÏîÄ¿
+ä½¿ç”¨gitlabçš„APIæ‰¹é‡åˆ›å»ºé¡¹ç›®ä»“åº“:
 
+å†™å…¥æ‰€æœ‰ç¾¤ç»„XXXçš„æ‰€æœ‰é¡¹ç›®åˆ°æ–‡ä»¶repoä¸­ï¼š
 
-Ê¹ÓÃgitlabµÄAPIÅúÁ¿´´½¨ÏîÄ¿²Ö¿â:
+vim repo
 
-Ğ´ÈëËùÓĞÈº×éXXXµÄËùÓĞÏîÄ¿µ½ÎÄ¼şrepoÖĞ£º
-
-vi repo
-
-
-»ñµÃ·Ö×éµÄÃüÃû¿Õ¼äid£¬±ÈÈçÎª9£¬Ê¹ÓÃgitlabµÄAPIÅúÁ¿´´½¨·Ö×éÃüÃû¿Õ¼äipÎª9µÄ²Ö¿â£º
-
+è·å¾—åˆ†ç»„çš„å‘½åç©ºé—´idï¼Œæ¯”å¦‚ä¸º9ï¼Œä½¿ç”¨gitlabçš„APIæ‰¹é‡åˆ›å»ºåˆ†ç»„å‘½åç©ºé—´ipä¸º9çš„ä»“åº“ï¼š
 
 ```
 for i in `cat repo`; do
@@ -104,21 +97,17 @@ curl --request POST --header "PRIVATE-TOKEN: 9koXXXXOOOOOs5t"  --data "name=${i}
 done
 
 ```
+## repoåº“è¿ç§»åŠæ‰¹é‡åˆ›å»ºgitlabåº“
 
-# 2.repo¿âÇ¨ÒÆ¼°ÅúÁ¿´´½¨gitlab¿â
+### èƒŒæ™¯
 
+å¼€å‘ä»£ç æ”¾ç½®åœ¨å¤–éƒ¨gitæœåŠ¡å™¨ï¼Œä½¿ç”¨repoè¿›è¡Œä»£ç æ›´æ–°ï¼Œç”±äºä»£ç é‡å¤§ã€åº“å¤šã€å…¬å¸ç½‘ç»œç¯å¢ƒç­‰å½±å“ï¼Œä»æœåŠ¡å™¨è·å–æ•´ä½“ä»£ç é€Ÿåº¦ç¼“æ…¢ï¼Œå°†å€ŸåŠ©jenkinsåŠgitlabï¼Œåœ¨æœ¬åœ°linuxæœåŠ¡å™¨åˆ›å»ºrepoç‰ˆæœ¬åº“ï¼Œå°†å¤–éƒ¨æœåŠ¡å™¨ä»£ç æ•´ä½“ä¿å­˜åˆ°æœ¬åœ°å±€åŸŸç½‘æœåŠ¡å™¨ï¼Œç¼–è¯‘å¼€å‘æ—¶ä»æœ¬åœ°æœåŠ¡å™¨å–å¾—ä»£ç ä½¿ç”¨ã€‚
 
-## ±³¾°
+### å®æ–½
 
-¿ª·¢´úÂë·ÅÖÃÔÚÍâ²¿git·şÎñÆ÷£¬Ê¹ÓÃrepo½øĞĞ´úÂë¸üĞÂ£¬ÓÉÓÚ´úÂëÁ¿´ó¡¢¿â¶à¡¢¹«Ë¾ÍøÂç»·¾³µÈÓ°Ïì£¬´Ó·şÎñÆ÷»ñÈ¡ÕûÌå´úÂëËÙ¶È»ºÂı£¬½«½èÖújenkins¼°gitlab£¬ÔÚ±¾µØlinux·şÎñÆ÷´´½¨repo°æ±¾¿â£¬½«Íâ²¿·şÎñÆ÷´úÂëÕûÌå±£´æµ½±¾µØ¾ÖÓòÍø·şÎñÆ÷£¬±àÒë¿ª·¢Ê±´Ó±¾µØ·şÎñÆ÷È¡µÃ´úÂëÊ¹ÓÃ¡£
+### å–å¾—å¤–éƒ¨æœåŠ¡å™¨çš„é•œåƒåº“ ï¼ˆyour_url ä¸ºå¤–éƒ¨åº“åœ°å€ï¼‰
 
-## ÊµÊ©
-
-
-### È¡µÃÍâ²¿·şÎñÆ÷µÄ¾µÏñ¿â £¨your_url ÎªÍâ²¿¿âµØÖ·£©
-
-
-ÒòÎªÕûÌå´úÂëÓÉ200¶à¸ö´úÂë¿â×é³É,Ö±½ÓÊ¹ÓÃrepo»ñÈ¡¾µÏñ¿â,×·¼Ó--mirror²ÎÊı£¬½«ÏÂÃæ±êºì×ÖÌåÌæ»»ÎªÄãµÄrepoÂ·¾¶
+å› ä¸ºæ•´ä½“ä»£ç ç”±200å¤šä¸ªä»£ç åº“ç»„æˆ,ç›´æ¥ä½¿ç”¨repoè·å–é•œåƒåº“,è¿½åŠ --mirrorå‚æ•°ï¼Œå°†ä¸‹é¢æ ‡çº¢å­—ä½“æ›¿æ¢ä¸ºä½ çš„repoè·¯å¾„
 
 ```
 mkdir repo_mirror
@@ -126,56 +115,46 @@ mkdir repo_mirror
 cd repo_mirror
 
 ```
-
-### ³õÊ¼»¯°æ±¾¿â£º
+1ã€åˆå§‹åŒ–ç‰ˆæœ¬åº“ï¼š
 
 repo init --mirror -u IPofgitlab/manifests.git--repo-IPofgitlab/repo.git -mmanifest.xml
 
-
-### Í¬²½£º
+2ã€ åŒæ­¥ï¼š
 
     repo sync
 
-Í¬²½Íê³Éºó£¬½«ÔÚÏÂÃæ½«ËùÓĞrepo´úÂë¿âµÄ¾µÏñ¿â·ÅÖÃµ½repo_mirrorÄ¿Â¼ÏÂ¡£
+åŒæ­¥å®Œæˆåï¼Œå°†åœ¨ä¸‹é¢å°†æ‰€æœ‰repoä»£ç åº“çš„é•œåƒåº“æ”¾ç½®åˆ°repo_mirrorç›®å½•ä¸‹ã€‚
 
+3ã€ å–å¾—æ‰€æœ‰ä»£ç åº“æ–‡ä»¶å,æ–¹ä¾¿æ‰¹é‡åˆ›å»ºproject
 
-### È¡µÃËùÓĞ´úÂë¿âÎÄ¼şÃû,·½±ãÅúÁ¿´´½¨project
+repo_mirrorç›®å½•æ‰§è¡Œï¼šls >../projects_list.txt
 
-
-repo_mirrorÄ¿Â¼Ö´ĞĞ£ºls >../projects_list.txt
-
-´ò¿ªprojects_list.txt½«projects_list.txt ÄÚËùÓĞ.git Ìæ»»Îª \ 
+æ‰“å¼€projects_list.txtå°†projects_list.txt å†…æ‰€æœ‰.git æ›¿æ¢ä¸º \ 
 
     perl  -i -lpe '#\.git# \#'  projects_list.txt
 
 ````
-Ìæ»»Ç°£º
+æ›¿æ¢å‰ï¼š
 
 pro1.git
 pro2.git
 pro3.git
 
-Ìæ»»ºó£º
+æ›¿æ¢åï¼š
 
 pro1 \
 pro2 \
 pro3 \
 ````
+4ã€ä½¿ç”¨gitlab apiæ‰¹é‡åœ¨æŒ‡å®šgroupsä¸‹åˆ›å»ºprojectã€‚
 
+æµè§ˆå™¨è®¿é—®http://IPofgitlab/api/v4/projects æŸ¥æ‰¾éœ€è¦groupsçš„ID ï¼Œå¯¹åº”ä¸ºnamespaceçš„idï¼Œå–å¾—æœ¬æ¬¡åˆ›å»ºéœ€è¦çš„ç»„idå€¼ä¸º9ã€‚
 
-### Ê¹ÓÃgitlab apiÅúÁ¿ÔÚÖ¸¶¨groupsÏÂ´´½¨project¡£
-
-
-
-ä¯ÀÀÆ÷·ÃÎÊhttp://IPofgitlab/api/v4/projects ²éÕÒĞèÒªgroupsµÄID £¬¶ÔÓ¦ÎªnamespaceµÄid£¬È¡µÃ±¾´Î´´½¨ĞèÒªµÄ×éidÖµÎª9¡£
-
-»òÕßÍ¨¹ınamespace½Ó¿Ú»ñÈ¡Æälist
+æˆ–è€…é€šè¿‡namespaceæ¥å£è·å–å…¶list
 
     http://IPofgitlab/api/v4/namespaces
 
-
-
-### ´´½¨gitlabµÄprojects
+5ã€ åˆ›å»ºgitlabçš„projects
 
 ````
     projects="pro1 \
@@ -189,14 +168,11 @@ pro3 \
     done
 
 ````
+æ‰§è¡Œç»“æŸååˆ°ç™»å½•åˆ°gitlabï¼Œç¡®å®šåº“åˆ›å»ºå®Œæˆã€‚
 
-Ö´ĞĞ½áÊøºóµ½µÇÂ¼µ½gitlab£¬È·¶¨¿â´´½¨Íê³É¡£
-
-
-###  ½«¾µÏñ¿âÉÏ´«µ½±¾µØgitlabÉÏ
+6ã€ å°†é•œåƒåº“ä¸Šä¼ åˆ°æœ¬åœ°gitlabä¸Š
 
 ```
-
     dir_name="$PWD"
 
     all=`ls ${dir_name}`
@@ -212,100 +188,82 @@ pro3 \
     done 
 
 ```
+æ‰§è¡Œè„šæœ¬ï¼Œç¡®å®šç‰ˆæœ¬åº“pushæ— è¯¯ã€‚
 
-Ö´ĞĞ½Å±¾£¬È·¶¨°æ±¾¿âpushÎŞÎó¡£
 
-
-### ¿ÉÒÔÊ¹ÓÃ±¾µØ¿â½øĞĞrepo´úÂëÈ¡µÃ £¨your_local_urlÎª±¾µØgitlab¿âµØÖ·£©
-
+7ã€å¯ä»¥ä½¿ç”¨æœ¬åœ°åº“è¿›è¡Œrepoä»£ç å–å¾— ï¼ˆyour_local_urlä¸ºæœ¬åœ°gitlabåº“åœ°å€ï¼‰
 
     repo init -u your_local_url/manifests.git--repo-urlyour_local_url/repo.git -mmanifest.xml
 
-Í¬²½£º
+åŒæ­¥ï¼š
 
    repo sync
 
-# 3.gitlabÊı¾İÄ¿Â¼Ç¨ÒÆ
+## gitlabæ•°æ®ç›®å½•è¿ç§»
 
+gitlabä»£ç æ•°æ®é»˜è®¤ç›®å½•ï¼š/var/opt/gitlab/git-data/repositories
 
-gitlab´úÂëÊı¾İÄ¬ÈÏÄ¿Â¼£º/var/opt/gitlab/git-data/repositories
-
-Êı¾İÄ¿Â¼£¬¹ÒÒ»¸ö´ó´ÅÅÌµ½Ä¿Â¼(Ä¿Â¼°´ÕÕÄãµÄÏ²ºÃÃüÃû)
+æ•°æ®ç›®å½•ï¼ŒæŒ‚ä¸€ä¸ªå¤§ç£ç›˜åˆ°ç›®å½•(ç›®å½•æŒ‰ç…§ä½ çš„å–œå¥½å‘½å)
 
 ````
 makedir  -p /data/gitlab-data
 mount sdb  data/gitlab-data
 ````
 
-## ²Ù×÷²½Öè£º
+### æ“ä½œæ­¥éª¤ï¼š
 
-### Í£Ö¹Ïà¹ØÊı¾İÁ¬½Ó·şÎñ
+1ã€åœæ­¢ç›¸å…³æ•°æ®è¿æ¥æœåŠ¡
 
     gitlab-ctl stop unicorn   
     gitlab-ctl stop sidekiq
 
-## Êı¾İÇ¨ÒÆ
+2ã€æ•°æ®è¿ç§»
 
     cp -r -p /var/opt/gitlab/git-data/repositories/ /home/gitlab-data/
 
+è¿™é‡ŒCPä¸€å®šè¦åŠ ä¸Š-på‚æ•°ï¼Œä¸ç„¶ä¼šå¯¼è‡´æƒé™é—®é¢˜
 
-ÕâÀïCPÒ»¶¨Òª¼ÓÉÏ-p²ÎÊı£¬²»È»»áµ¼ÖÂÈ¨ÏŞÎÊÌâ
-
-
-### ¸ü¸ÄÅäÖÃ /etc/gitlab/gitlab.rb
+3ã€æ›´æ”¹é…ç½® /etc/gitlab/gitlab.rb
 
 vim /etc/gitlab/gitlab.rb
 
-#Ö¸¶¨Êı¾İÄ¿Â¼
+4ã€æŒ‡å®šæ•°æ®ç›®å½•
 
 git_data_dir "/home/gitlab-data"
 
-
-### Ê¹ÅäÖÃÉúĞ§
+5ã€ ä½¿é…ç½®ç”Ÿæ•ˆ
 
      gitlab-ctl reconfigure
 
-
-### ÖØÆôgitlab
+6ã€ é‡å¯gitlab
 
      gitlab-ctl restart
 
+##  gitlabå¸¸è§é”™è¯¯
 
+### é”™è¯¯502è§£å†³åŠæ³•
 
-##  ´íÎó502½â¾ö°ì·¨
+8080 ç«¯å£å†²çª
 
+åŸå› ï¼šç”±äºunicorné»˜è®¤ä½¿ç”¨çš„æ˜¯ 8080 ç«¯å£ã€‚
 
-### 8080 ¶Ë¿Ú³åÍ»
+è§£å†³åŠæ³•ï¼šæ‰“å¼€ /etc/gitlab/gitlab.rb ,
+å»æ‰ # unicorn['port'] = 8080 çš„æ³¨é‡Šï¼Œå°† 8080 ä¿®æ”¹ä¸º 9090 ï¼Œä¿å­˜åè¿è¡Œ sudo gitlab-ctl reconfigure å³å¯ã€‚
 
+å¦‚æœå†…å­˜è¾ƒå°ï¼ŒæœåŠ¡å™¨ç¡¬ä»¶èµ„æºå¤ªå°
 
-Ô­Òò£ºÓÉÓÚunicornÄ¬ÈÏÊ¹ÓÃµÄÊÇ 8080 ¶Ë¿Ú¡£
+åˆ™æœåŠ¡å¯åŠ¨è¿‡ç¨‹è¾ƒæ…¢ï¼Œåœ¨æ­¤æœŸé—´å¯åŠ¨åˆ™ä¼šå¯¼è‡´502ï¼Œç­‰ä¸€æ®µæ—¶é—´ï¼ŒæœåŠ¡å¯åŠ¨åï¼Œåœ¨è®¿é—®å°±okäº†
 
-½â¾ö°ì·¨£º´ò¿ª /etc/gitlab/gitlab.rb ,
-È¥µô # unicorn['port'] = 8080 µÄ×¢ÊÍ£¬½« 8080 ĞŞ¸ÄÎª 9090 £¬±£´æºóÔËĞĞ sudo gitlab-ctl reconfigure ¼´¿É¡£
+## å…¶ä»–ä¿¡æ¯ & Urlé“¾æ¥
 
-### Èç¹ûÄÚ´æ½ÏĞ¡£¬·şÎñÆ÷Ó²¼ş×ÊÔ´Ì«Ğ¡
-
-Ôò·şÎñÆô¶¯¹ı³Ì½ÏÂı£¬ÔÚ´ËÆÚ¼äÆô¶¯Ôò»áµ¼ÖÂ502£¬µÈÒ»¶ÎÊ±¼ä£¬·şÎñÆô¶¯ºó£¬ÔÚ·ÃÎÊ¾ÍokÁË
-
-
-# ÆäËûĞÅÏ¢ & UrlÁ´½Ó
-
-
-### gitlab-runnerÎÄµµ
+gitlab-runneræ–‡æ¡£
 
 https://gitlab.com/gitlab-org/gitlab-runner/tree/master/docs
 
-### Security°²È«ÎÄµµ
+Securityå®‰å…¨æ–‡æ¡£
 
 https://gitlab.com/help/security/README.md
 
-### gitlab ¹ÙÍø
+gitlab å®˜ç½‘  www.gitlab.com
 
-www.gitlab.com
-
-### gitlab QQ½»Á÷Èº
-
-208598995
-
-
-
+gitlab QQäº¤æµç¾¤ 208598995
