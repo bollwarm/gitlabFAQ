@@ -23,6 +23,7 @@ Security安全文档
 
 https://gitlab.com/help/security/README.md
 
+
 ## gitlab安装和配置
 
 ### 安装gitlab （以centos 6 为例）
@@ -74,6 +75,10 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 第一个是url，那是显示在你gitlab页面链接那的url
 
 第二，三分别是需要自定义的ssh和web端口
+
+## gitlab nginx配置（HTPPS支持等）
+
+[gitlab nginx配置](https://docs.gitlab.com/omnibus/settings/nginx.html#configuring-gitlab-trusted_proxies-and-the-nginx-real_ip-module)
 
 ### 配置生效和重启服务
 
