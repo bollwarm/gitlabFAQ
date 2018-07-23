@@ -263,7 +263,7 @@ mount sdb  data/gitlab-data
 
      gitlab-ctl restart
 
-##  gitlab常见错误
+##  git & gitlab常见错误
 
 ### 错误502解决办法
 
@@ -277,6 +277,27 @@ mount sdb  data/gitlab-data
 如果内存较小，服务器硬件资源太小
 
 则服务启动过程较慢，在此期间启动则会导致502，等一段时间，服务启动后，在访问就ok了
+
+## git SSH认证问题
+
+1、很简单的，证书添加后：
+
+ssh -T git@IP测试，测试成功说明证书添加成功。
+
+比如测试github: ssh -T git@github.com
+
+    Hi bollwarm! You've successfully authenticated, but GitHub does not provide shell access.
+
+如果有问题，则你证书生成或者添加有问题。你可以ssh -vv -T git@IP 来看详细ssh通讯过程和报错，找出问题。
+
+主要问题生成不对；文件权限问题（linux下证书权限必须为600，如果是从其他地方复制来的需要注意）；添加公钥时候
+添加不是用户账号下证书，而是部署证书（部署证书没有push权限）。 
+
+2、确保你项目目录下.git/config 文件中远程仓deurl是ss链接：git或者ssh开头，而不是http/https开头
+
+3、https认证时候可以直接在配置url上配上用户名和密码，这样不用每次操作都输入用户名和密码，格式如下：
+
+    https://用户名:密码@IP其他部分。
 
 ## 其他信息
 
