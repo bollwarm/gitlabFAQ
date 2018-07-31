@@ -52,7 +52,7 @@ https://docs.gitlab.com/ce/install/installation.html
 
 ### docker安装
 
-https://docs.gitlab.com/ce/install/docker.html
+https://docs.gitlab.com/omnibus/docker/
 
 ### 典型的gitlab配置
 
