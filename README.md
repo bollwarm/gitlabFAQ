@@ -236,30 +236,30 @@ mount sdb  data/gitlab-data
 
 ### 操作步骤：
 
-++ 停止相关数据连接服务
++ 停止相关数据连接服务
 
     gitlab-ctl stop unicorn   
     gitlab-ctl stop sidekiq
 
-++ 数据迁移
++ 数据迁移
 
     cp -r -p /var/opt/gitlab/git-data/repositories/ /home/gitlab-data/
 
 这里CP一定要加上-p参数，不然会导致权限问题
 
-++ 更改配置 /etc/gitlab/gitlab.rb
++ 更改配置 /etc/gitlab/gitlab.rb
 
     vim /etc/gitlab/gitlab.rb
 
-++ 指定数据目录
++ 指定数据目录
 
     git_data_dir "/home/gitlab-data"
 
-++  使配置生效
++  使配置生效
 
      gitlab-ctl reconfigure
 
-++  重启gitlab
++  重启gitlab
 
      gitlab-ctl restart
 
