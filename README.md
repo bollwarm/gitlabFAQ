@@ -95,11 +95,11 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 `
 ## 4 gitlab 使用API批量创建分组和项目
 
-(batchAPI.md)
+[gitlab 使用API批量创建分组和项目](batchAPI.md)
 
 ## 5 repo库迁移及批量创建gitlab库
 
-(batchADD.md)
+[repo库迁移及批量创建gitlab库](batchADD.md)
 
 ## 6 gitlab数据目录迁移
 
