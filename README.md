@@ -1,7 +1,7 @@
 
-## 有用信息 & Url链接
+## 1.有用信息 & Url链接
 
-### 在线git教程
+### 1.1在线git教程
 
 [git简明教程](http://rogerdudler.github.io/git-guide/)
 
@@ -9,7 +9,7 @@
 
 [Pro Git中文版](https://book.git-scm.com/book/zh/v2)
 
-### gitlab链接
+### 1.2 gitlab链接
 
 gitlab 官网  www.gitlab.com
 
@@ -24,9 +24,9 @@ Security安全文档
 https://gitlab.com/help/security/README.md
 
 
-## gitlab安装和配置
+## 2.gitlab安装和配置
 
-### 安装gitlab （以centos 6 为例）
+### 2.1安装gitlab （以centos 6 为例）
 
 只需要两步，官方说明的第一步实际上可以省略，如果后面发现有问题，在yum其他依赖包，其实上依赖包都安装了。
 
@@ -46,15 +46,15 @@ https://gitlab.com/help/security/README.md
 
 然后浏览器用gitlab.xxoo访问，用户用root，并且任意8个字符登陆，然后修改密码。
 
-### 源码安装 [一般没必要]
+### 2.2源码安装 [一般没必要]
 
 https://docs.gitlab.com/ce/install/installation.html
 
-### docker安装
+### 2.3 docker安装
 
 https://docs.gitlab.com/omnibus/docker/
 
-### 典型的gitlab配置
+### 2.4 典型的gitlab配置
 
 ```
 external_url 'http://git.YOUdomain'
@@ -76,11 +76,11 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 
 第二，三分别是需要自定义的ssh和web端口
 
-## gitlab nginx配置（HTPPS支持等）
+## 3 gitlab nginx配置（HTPPS支持等）
 
 [gitlab nginx配置](https://docs.gitlab.com/omnibus/settings/nginx.html#configuring-gitlab-trusted_proxies-and-the-nginx-real_ip-module)
 
-### 配置生效和重启服务
+### 3.1 配置生效和重启服务
 
     gitlab-ctl reconfig
     gitlab-ctl restart
@@ -91,7 +91,7 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 比如为了修改web端口去修改nginx配置，那都是错误的方法，很多blog都是那样配的，
 那是完全错误的方法。reconfig就会丢掉。
 `
-## gitlab 使用API批量创建分组和项目
+## 4 gitlab 使用API批量创建分组和项目
 
 ###  创建分组
 
@@ -127,7 +127,7 @@ curl --request POST --header "PRIVATE-TOKEN: 9koXXXXOOOOOs5t" \
 done
 
 ```
-## repo库迁移及批量创建gitlab库
+## 5 repo库迁移及批量创建gitlab库
 
 ### 取得外部服务器的镜像库 （your_url 为外部库地址）
 
@@ -139,17 +139,17 @@ mkdir repo_mirror
 cd repo_mirror
 
 ```
-1、初始化版本库：
+初始化版本库：
 
 repo init --mirror -u IPofgitlab/manifests.git--repo-IPofgitlab/repo.git -mmanifest.xml
 
-2、 同步：
+同步：
 
     repo sync
 
 同步完成后，将在下面将所有repo代码库的镜像库放置到repo_mirror目录下。
 
-3、 取得所有代码库文件名,方便批量创建project
+取得所有代码库文件名,方便批量创建project
 
 repo_mirror目录执行：ls >../projects_list.txt
 
@@ -170,7 +170,7 @@ pro1 \
 pro2 \
 pro3 \
 ````
-4、使用gitlab api批量在指定groups下创建project。
+使用gitlab api批量在指定groups下创建project。
 
 浏览器访问http://IPofgitlab/api/v4/projects 查找需要groups的ID ，对应为namespace的id，取得本次创建需要的组id值为9。
 
@@ -178,7 +178,7 @@ pro3 \
 
     http://IPofgitlab/api/v4/namespaces
 
-5、 创建gitlab的projects
+创建gitlab的projects
 
 ````
     projects="pro1 \
@@ -194,7 +194,7 @@ pro3 \
 ````
 执行结束后到登录到gitlab，确定库创建完成。
 
-6、 将镜像库上传到本地gitlab上
+将镜像库上传到本地gitlab上
 
 ```
     dir_name="$PWD"
@@ -215,7 +215,7 @@ pro3 \
 执行脚本，确定版本库push无误。
 
 
-7、可以使用本地库进行repo代码取得 （your_local_url为本地gitlab库地址）
+可以使用本地库进行repo代码取得 （your_local_url为本地gitlab库地址）
 
     repo init -u your_local_url/manifests.git--repo-urlyour_local_url/repo.git -mmanifest.xml
 
@@ -223,7 +223,7 @@ pro3 \
 
    repo sync
 
-## gitlab数据目录迁移
+## 6 gitlab数据目录迁移
 
 gitlab代码数据默认目录：/var/opt/gitlab/git-data/repositories
 
@@ -236,36 +236,36 @@ mount sdb  data/gitlab-data
 
 ### 操作步骤：
 
-1、停止相关数据连接服务
+++ 停止相关数据连接服务
 
     gitlab-ctl stop unicorn   
     gitlab-ctl stop sidekiq
 
-2、数据迁移
+++ 数据迁移
 
     cp -r -p /var/opt/gitlab/git-data/repositories/ /home/gitlab-data/
 
 这里CP一定要加上-p参数，不然会导致权限问题
 
-3、更改配置 /etc/gitlab/gitlab.rb
+++ 更改配置 /etc/gitlab/gitlab.rb
 
     vim /etc/gitlab/gitlab.rb
 
-4、指定数据目录
+++ 指定数据目录
 
     git_data_dir "/home/gitlab-data"
 
-5、 使配置生效
+++  使配置生效
 
      gitlab-ctl reconfigure
 
-6、 重启gitlab
+++  重启gitlab
 
      gitlab-ctl restart
 
-##  git & gitlab常见错误
+## 7  git & gitlab常见错误
 
-### 错误502解决办法
+### 7.1 错误502解决办法
 
 8080 端口冲突
 
@@ -278,11 +278,11 @@ mount sdb  data/gitlab-data
 
 则服务启动过程较慢，在此期间启动则会导致502，等一段时间，服务启动后，在访问就ok了
 
-## git SSH认证问题
+### 7.2 git SSH认证问题
 
-1、很简单的，证书添加后：
+#### 很简单的，证书添加后：
 
-ssh -T git@IP测试，测试成功说明证书添加成功。
++ ssh -T git@IP测试，测试成功说明证书添加成功。
 
 比如测试github: ssh -T git@github.com
 
@@ -293,13 +293,13 @@ ssh -T git@IP测试，测试成功说明证书添加成功。
 主要问题生成不对；文件权限问题（linux下证书权限必须为600，如果是从其他地方复制来的需要注意）；添加公钥时候
 添加不是用户账号下证书，而是部署证书（部署证书没有push权限）。 
 
-2、确保你项目目录下.git/config 文件中远程仓deurl是ss链接：git或者ssh开头，而不是http/https开头
++ 确保你项目目录下.git/config 文件中远程仓deurl是ss链接：git或者ssh开头，而不是http/https开头
 
-3、https认证时候可以直接在配置url上配上用户名和密码，这样不用每次操作都输入用户名和密码，格式如下：
++ https认证时候可以直接在配置url上配上用户名和密码，这样不用每次操作都输入用户名和密码，格式如下：
 
     https://用户名:密码@IP其他部分。
 
-## 其他信息
+## 8 其他信息
 
 更多信息欢迎[Pull Request](https://github.com/bollwarm/gitlabFAQ)
 
