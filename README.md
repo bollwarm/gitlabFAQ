@@ -301,7 +301,7 @@ ssh -T git@IP测试，测试成功说明证书添加成功。
 
 ## 其他信息
 
-跟多信息欢迎[Pull Request][https://github.com/bollwarm/gitlabFAQ]
+更多信息欢迎[Pull Request](https://github.com/bollwarm/gitlabFAQ)
 
 gitlab QQ交流群 208598995,交流
 
