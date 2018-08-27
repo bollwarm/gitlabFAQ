@@ -101,7 +101,7 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 
     gitlab-rails console production
 
-2、以此输入执行以下操作
+2、依次输入执行以下操作
 
 ```
 user = User.where(id: 1).first
