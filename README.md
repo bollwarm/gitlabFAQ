@@ -76,6 +76,8 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 
 第二，三分别是需要自定义的ssh和web端口
 
+修改后重加载和重启服务（3.2）
+
 ## 3 gitlab nginx配置（HTPPS支持等）
 
 ### 3.1 gitlab nginx配置
@@ -92,7 +94,26 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 修改好gitlab-ctl reconfig 会自动生成各个部分的配置，不要单独去改其他部分的配置，
 比如为了修改web端口去修改nginx配置，那都是错误的方法，很多blog都是那样配的，
 那是完全错误的方法。reconfig就会丢掉。
-`
+
+### 3.3 修改gitlab root密码
+
+1.启动rails console
+
+    gitlab-rails console production
+
+2、以此输入执行以下操作
+
+```
+user = User.where(id: 1).first
+
+user.password="你的密码"
+
+user.save!
+
+quit
+
+```
+
 ## 4 gitlab 使用API批量创建分组和项目
 
 [gitlab 使用API批量创建分组和项目](batchAPI.md)
