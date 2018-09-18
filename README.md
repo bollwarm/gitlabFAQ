@@ -3,7 +3,7 @@
 
 ### 1.1 在线git教程
 
-[git简明教程](http://rogerdudler.github.io/git-guide/)
+[git简明教程](http://rogerdudler.github.io/git-guide/index.zh.html)
 
 [图解Git](http://marklodato.github.io/visual-git-guide/index-zh-cn.html#commands-in-detail)
 
