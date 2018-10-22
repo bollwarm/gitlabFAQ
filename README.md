@@ -23,6 +23,9 @@ Security安全文档
 
 https://gitlab.com/help/security/README.md
 
+gitlab安装国内镜像(清华)
+
+https://mirror.tuna.tsinghua.edu.cn/help/gitlab-ce/
 
 ## 2 gitlab安装和配置
 
