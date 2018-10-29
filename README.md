@@ -9,7 +9,7 @@
 
 [Pro Git中文版](https://book.git-scm.com/book/zh/v2)
 
-[交互式git联系](https://learngitbranching.js.org/)
+[交互式git练习](https://learngitbranching.js.org/)
 
 ### 1.2 gitlab链接
 
