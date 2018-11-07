@@ -11,6 +11,8 @@
 
 [交互式git练习](https://learngitbranching.js.org/)
 
+[Git飞行规则(git常见问题排查)](https://github.com/k88hudson/git-flight-rules/blob/master/README_zh-CN.md)
+
 ### 1.2 gitlab链接
 
 gitlab 官网  www.gitlab.com
