@@ -173,16 +173,18 @@ mount sdb  data/gitlab-data
 
 ### 7.1 错误502解决办法
 
-8080 端口冲突
+#### 8080 端口冲突
 
 原因：由于unicorn默认使用的是 8080 端口。
 
 解决办法：打开 /etc/gitlab/gitlab.rb ,去掉 # unicorn['port'] = 8080 的注释，
 将 8080 修改为 9090 ，保存后运行 sudo gitlab-ctl reconfigure 即可。
 
+#### 内存原因
+
 如果内存较小，服务器硬件资源太小
 
-则服务启动过程较慢，在此期间启动则会导致502，等一段时间，服务启动后，在访问就ok了
+则服务启动过程较慢，在此期间启动则会导致502，等一段时间，服务启动后，再访问就ok了
 
 ### 7.2 git SSH认证问题
 
@@ -194,7 +196,7 @@ mount sdb  data/gitlab-data
 
 `Hi bollwarm! You've successfully authenticated, but GitHub does not provide shell access.`
 
-如果有问题，则你证书生成或者添加有问题。你可以`ssh -vv -T git@IP`' 来看详细ssh通讯过程和报错，找出问题。
+如果有问题，则你证书生成或者添加有问题。你可以`ssh -vv -T git@IP` 来看详细ssh通讯过程和报错，找出问题。
 
 主要问题keys生成不对；
 
@@ -213,6 +215,6 @@ mount sdb  data/gitlab-data
 
 更多信息欢迎[Pull Request](https://github.com/bollwarm/gitlabFAQ)
 
-gitlab QQ交流群 208598995,交流
+gitlab QQ交流群 `208598995`,交流
 
 本repo会持续更新
