@@ -1,5 +1,5 @@
 
-## 1 有用信息 & Url链接
+## 1 有用信息 & Url链接 📝
 
 ### 1.1 在线git教程
 
@@ -31,7 +31,7 @@ gitlab安装国内镜像(清华)
 
 https://mirror.tuna.tsinghua.edu.cn/help/gitlab-ce/
 
-## 2 gitlab安装和配置
+## 2 gitlab安装和配置 🚧
 
 ### 2.1安装gitlab （以centos 6 为例）
 
@@ -85,7 +85,7 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 
 修改后重加载和重启服务（3.2）
 
-## 3 gitlab nginx配置（HTPPS支持等）
+## 3 gitlab nginx配置（HTPPS支持等）🔨
 
 ### 3.1 gitlab nginx配置
 
@@ -121,15 +121,15 @@ quit
 
 ```
 
-## 4 gitlab 使用API批量创建分组和项目
+## 4 gitlab 使用API批量创建分组和项目 🐎
 
 [gitlab 使用API批量创建分组和项目](batchAPI.md)
 
-## 5 repo库迁移及批量创建gitlab库
+## 5 repo库迁移及批量创建gitlab库 ⚡️
 
 [repo库迁移及批量创建gitlab库](batchADD.md)
 
-## 6 gitlab数据目录迁移
+## 6 gitlab数据目录迁移 🚑
 
 gitlab代码数据默认目录：/var/opt/gitlab/git-data/repositories
 
@@ -169,7 +169,7 @@ mount sdb  data/gitlab-data
 
      gitlab-ctl restart
 
-## 7  git & gitlab常见错误
+## 7  git & gitlab常见错误 🐛
 
 ### 7.1 错误502解决办法
 
@@ -192,12 +192,16 @@ mount sdb  data/gitlab-data
 
 比如测试github: `ssh -T git@github.com`
 
-    Hi bollwarm! You've successfully authenticated, but GitHub does not provide shell access.
+`Hi bollwarm! You've successfully authenticated, but GitHub does not provide shell access.`
 
-如果有问题，则你证书生成或者添加有问题。你可以ssh -vv -T git@IP 来看详细ssh通讯过程和报错，找出问题。
+如果有问题，则你证书生成或者添加有问题。你可以`ssh -vv -T git@IP`' 来看详细ssh通讯过程和报错，找出问题。
 
-主要问题生成不对；文件权限问题（linux下证书权限必须为600，如果是从其他地方复制来的需要注意）；添加公钥时候
-添加不是用户账号下证书，而是部署证书（部署证书没有push权限）。 
+主要问题keys生成不对；
+
+文件权限问题（linux下证书权限必须为600，如果是从其他地方复制来的需要注意）；
+
+添加公钥时候添加不是用户账号下证书，而是部署证书（部署证书没有push权限）。 
+
 
 + 确保你项目目录下.git/config 文件中远程仓deurl是ss链接：git或者ssh开头，而不是http/https开头
 
@@ -205,7 +209,7 @@ mount sdb  data/gitlab-data
 
     https://用户名:密码@IP其他部分。
 
-## 8 其他信息
+## 8 其他信息 🌐
 
 更多信息欢迎[Pull Request](https://github.com/bollwarm/gitlabFAQ)
 
