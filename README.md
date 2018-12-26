@@ -15,6 +15,8 @@
 
 ### 1.2 gitlab链接
 
+gitlab当前版本`11.6`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?context=%7B%22nid%22%3A%22news_10397293277319290255%22%2C%22sourceFrom%22%3A%22bjh%22%2C%22url_data%22%3A%22bjhauthor%22%7D)
+
 gitlab 官网  www.gitlab.com
 
 gitlab QQ交流群 208598995
