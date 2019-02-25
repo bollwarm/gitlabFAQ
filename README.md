@@ -15,7 +15,7 @@
 
 ### 1.2 gitlab链接
 
-gitlab当前版本`11.7`,[功能介绍](http://baijiahao.baidu.com/builder/preview/s?id=1623623765490509546)
+gitlab当前版本`11.8`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22%3A%22news_9357882608472101547%22%2C%22sourceFrom%22%3A%22bjh%22%2C%22url_data%22%3A%22bjhauthor%22})
 
 gitlab 官网  www.gitlab.com
 
