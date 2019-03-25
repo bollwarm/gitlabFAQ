@@ -31,6 +31,10 @@ gitlab当前版本`11.9`,[功能介绍](https://mbd.baidu.com/newspage/data/land
 
 [gitlab 11.3](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9510042648375404911%22})
 
+[gitlab 11.2](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9510042648375404911%22})
+
+[gitlab 11.1](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_8736339036171498903%22})
+
 gitlab 官网  www.gitlab.com
 
 gitlab QQ交流群 208598995
