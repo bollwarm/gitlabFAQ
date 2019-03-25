@@ -19,7 +19,7 @@ gitlab当前版本`11.9`,[功能介绍](https://mbd.baidu.com/newspage/data/land
 
 #### 历史版本
 
-[gitlab 11.8](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22%3A%22news_9357882608472101547%22%2C%22})
+[gitlab 11.8](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9357882608472101547%22})
 
 [gitlab 11.7](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9575778376970300115%22})
 
