@@ -15,11 +15,21 @@
 
 ### 1.2 gitlab链接
 
-gitlab当前版本`11.9`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?pageType=1&isBdboxFrom=1&context={%22nid%22:%22news_9951422023536597182%22,%22sourceFrom%22:%22bjh%22})
+gitlab当前版本`11.9`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9951422023536597182%22})
 
-历史版本
+#### 历史版本
 
-[gitlab 11.8](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22%3A%22news_9357882608472101547%22%2C%22sourceFrom%22%3A%22bjh%22%2C%22url_data%22%3A%22bjhauthor%22})
+[gitlab 11.8](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22%3A%22news_9357882608472101547%22%2C%22})
+
+[gitlab 11.7](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9575778376970300115%22})
+
+[gitlab 11.6](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_10397293277319290255%22})
+
+[gitlab 11.5](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9560230822959784969%22})
+
+[gitlab 11.4](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9359524583066234852%22})
+
+[gitlab 11.3](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9510042648375404911%22})
 
 gitlab 官网  www.gitlab.com
 
