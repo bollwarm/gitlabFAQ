@@ -15,7 +15,11 @@
 
 ### 1.2 gitlab链接
 
-gitlab当前版本`11.8`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22%3A%22news_9357882608472101547%22%2C%22sourceFrom%22%3A%22bjh%22%2C%22url_data%22%3A%22bjhauthor%22})
+gitlab当前版本`11.9`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?pageType=1&isBdboxFrom=1&context={%22nid%22:%22news_9951422023536597182%22,%22sourceFrom%22:%22bjh%22})
+
+历史版本
+
+[gitlab 11.8](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22%3A%22news_9357882608472101547%22%2C%22sourceFrom%22%3A%22bjh%22%2C%22url_data%22%3A%22bjhauthor%22})
 
 gitlab 官网  www.gitlab.com
 
@@ -95,7 +99,7 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 
 ### 3.2 配置生效和重启服务
 
-    gitlab-ctl reconfig
+    gitlab-ctl reconfigure
     gitlab-ctl restart
 
 注意gitlab任何配置都在主配置`/etc/gitlab/gitlab.rb`里面修改
