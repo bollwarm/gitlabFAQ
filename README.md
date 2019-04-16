@@ -13,6 +13,8 @@
 
 [Git飞行规则(git常见问题排查)](https://github.com/k88hudson/git-flight-rules/blob/master/README_zh-CN.md)
 
+[:trollface:Git的奇技淫巧](https://github.com/521xueweihan/git-tips)
+
 ### 1.2 gitlab链接
 
 gitlab当前版本`11.9`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9951422023536597182%22})
@@ -20,20 +22,13 @@ gitlab当前版本`11.9`,[功能介绍](https://mbd.baidu.com/newspage/data/land
 #### 历史版本
 
 [gitlab 11.8](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9357882608472101547%22})
-
-[gitlab 11.7](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9575778376970300115%22})
-
-[gitlab 11.6](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_10397293277319290255%22})
-
-[gitlab 11.5](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9560230822959784969%22})
-
-[gitlab 11.4](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9359524583066234852%22})
-
-[gitlab 11.3](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9510042648375404911%22})
-
-[gitlab 11.2](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9510042648375404911%22})
-
-[gitlab 11.1](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_8736339036171498903%22})
+  [gitlab 11.7](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9575778376970300115%22})
+  [gitlab 11.6](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_10397293277319290255%22})
+  [gitlab 11.5](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9560230822959784969%22})
+  [gitlab 11.4](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9359524583066234852%22})
+  [gitlab 11.3](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9510042648375404911%22})
+  [gitlab 11.2](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9510042648375404911%22})
+  [gitlab 11.1](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_8736339036171498903%22})
 
 gitlab 官网  www.gitlab.com
 
