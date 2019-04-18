@@ -3,38 +3,38 @@
 
 ### 1.1 在线git教程
 
-[git简明教程](http://rogerdudler.github.io/git-guide/index.zh.html)
+[Git简明教程](http://rogerdudler.github.io/git-guide/index.zh.html)
 
 [图解Git](http://marklodato.github.io/visual-git-guide/index-zh-cn.html#commands-in-detail)
 
 [Pro Git中文版](https://book.git-scm.com/book/zh/v2)
 
-[交互式git练习](https://learngitbranching.js.org/)
+[交互式Git练习](https://learngitbranching.js.org/)
 
 [Git飞行规则(git常见问题排查)](https://github.com/k88hudson/git-flight-rules/blob/master/README_zh-CN.md)
 
 [:trollface:Git的奇技淫巧](https://github.com/521xueweihan/git-tips)
 
-### 1.2 gitlab链接
+### 1.2 Gitlab链接
 
-gitlab当前版本`11.9`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9951422023536597182%22})
+Gitlab当前版本`11.9`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9951422023536597182%22})
 
 #### 历史版本
 
-[gitlab 11.8](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9357882608472101547%22})
-  [gitlab 11.7](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9575778376970300115%22})
-  [gitlab 11.6](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_10397293277319290255%22})
-  [gitlab 11.5](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9560230822959784969%22})
-  [gitlab 11.4](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9359524583066234852%22})
-  [gitlab 11.3](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9510042648375404911%22})
-  [gitlab 11.2](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9510042648375404911%22})
-  [gitlab 11.1](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_8736339036171498903%22})
+[Gitlab 11.8](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9357882608472101547%22})
+  [Gitlab 11.7](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9575778376970300115%22})
+  [Gitlab 11.6](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_10397293277319290255%22})
+  [Gitlab 11.5](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9560230822959784969%22})
+  [Gitlab 11.4](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9359524583066234852%22})
+  [Gitlab 11.3](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9510042648375404911%22})
+  [Gitlab 11.2](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9510042648375404911%22})
+  [Gitlab 11.1](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_8736339036171498903%22})
 
-gitlab 官网  www.gitlab.com
+Gitlab 官网  www.gitlab.com
 
-gitlab QQ交流群 208598995
+Gitlab QQ交流群 208598995
 
-gitlab-runner文档
+Gitlab-runner文档
 
 https://gitlab.com/gitlab-org/gitlab-runner/tree/master/docs
 
@@ -42,17 +42,17 @@ Security安全文档
 
 https://gitlab.com/help/security/README.md
 
-gitlab安装国内镜像(清华)
+Gitlab安装国内镜像(清华)
 
 https://mirror.tuna.tsinghua.edu.cn/help/gitlab-ce/
 
-## 2 gitlab安装和配置 🚧
+## 2 Gitlab安装和配置 🚧
 
-### 2.1安装gitlab （以centos 6 为例）
+### 2.1安装Gitlab （以centos 6 为例）
 
 只需要两步，官方说明的第一步实际上可以省略，如果后面发现有问题，在yum其他依赖包，其实上依赖包都安装了。
 
-+ 添加gitlab yum源
++ 添加Gitlab yum源
 
     curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
 
@@ -76,7 +76,7 @@ https://docs.gitlab.com/ce/install/installation.html
 
 https://docs.gitlab.com/omnibus/docker/
 
-### 2.4 典型的gitlab配置
+### 2.4 典型的Gitlab配置
 
 ```
 external_url 'http://git.YOUdomain'
@@ -100,9 +100,9 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 
 修改后重加载和重启服务（3.2）
 
-## 3 gitlab nginx配置（HTPPS支持等）🔨
+## 3 Gitlab nginx配置（HTPPS支持等）🔨
 
-### 3.1 gitlab nginx配置
+### 3.1 Gitlab nginx配置
 
 (https://docs.gitlab.com/omnibus/settings/nginx.html#configuring-gitlab-trusted_proxies-and-the-nginx-real_ip-module)
 
@@ -117,7 +117,7 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 比如为了修改web端口去修改nginx配置，那都是错误的方法，很多blog都是那样配的，
 那是完全错误的方法。reconfig就会丢掉。
 
-### 3.3 修改gitlab root密码
+### 3.3 修改Gitlab管理员root密码
 
 1.启动rails console
 
@@ -136,17 +136,17 @@ quit
 
 ```
 
-## 4 gitlab 使用API批量创建分组和项目 🐎
+## 4 Gitlab 使用API批量创建分组和项目 🐎
 
 [gitlab 使用API批量创建分组和项目](batchAPI.md)
 
-## 5 repo库迁移及批量创建gitlab库 ⚡️
+## 5 仓库库迁移及批量创建Gitlab库 ⚡️
 
 [repo库迁移及批量创建gitlab库](batchADD.md)
 
-## 6 gitlab数据目录迁移 🚑
+## 6 Gitlab数据目录迁移 🚑
 
-gitlab代码数据默认目录：/var/opt/gitlab/git-data/repositories
+Gitlab代码数据默认目录：/var/opt/gitlab/git-data/repositories
 
 数据目录，挂一个大磁盘到目录[目录按照你的喜好命名]
 
@@ -184,7 +184,7 @@ mount sdb  data/gitlab-data
 
      gitlab-ctl restart
 
-## 7  git & gitlab常见错误 🐛
+## 7  Git & Gitlab常见错误 🐛
 
 ### 7.1 错误502解决办法
 
@@ -201,7 +201,7 @@ mount sdb  data/gitlab-data
 
 则服务启动过程较慢，在此期间启动则会导致502，等一段时间，服务启动后，再访问就ok了
 
-### 7.2 git SSH认证问题
+### 7.2 Git SSH认证问题
 
 #### 很简单的，证书添加后：
 
@@ -230,6 +230,6 @@ mount sdb  data/gitlab-data
 
 更多信息欢迎[Pull Request](https://github.com/bollwarm/gitlabFAQ)
 
-gitlab QQ交流群 `208598995`,交流
+Gitlab QQ交流群 `208598995`,交流
 
 本repo会持续更新
