@@ -17,10 +17,11 @@
 
 ### 1.2 Gitlab链接
 
-Gitlab当前版本`11.9`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9951422023536597182%22})
+Gitlab当前版本`11.10`,[功能介绍](https://www.toutiao.com/i6683306619461173771/)
 
 #### 历史版本
 
+[Gitlab 11.9](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9951422023536597182%22})
 [Gitlab 11.8](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9357882608472101547%22})
   [Gitlab 11.7](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9575778376970300115%22})
   [Gitlab 11.6](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_10397293277319290255%22})
