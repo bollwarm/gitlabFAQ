@@ -15,6 +15,8 @@
 
 [:trollface:Git的奇技淫巧](https://github.com/521xueweihan/git-tips)
 
+[GitHub 漫游指南](https://github.com/phodal/github)
+
 ### 1.2 Gitlab链接
 
 Gitlab当前版本`11.11`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22:%22news_10069320671135253803%22})
