@@ -19,10 +19,11 @@
 
 ### 1.2 Gitlab链接
 
-Gitlab当前版本`11.11`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22:%22news_10069320671135253803%22})
+Gitlab当前版本`12.0`,[功能介绍](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22:%22news_9558965903477159571%22})
 
 #### 历史版本
 
+[Gitlab 11.11](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22:%22news_10069320671135253803%22})
 [Gitlab 11.10](https://www.toutiao.com/i6683306619461173771/)
 [Gitlab 11.9](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9951422023536597182%22})
 [Gitlab 11.8](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9357882608472101547%22})
@@ -214,6 +215,8 @@ mount sdb  data/gitlab-data
 比如测试github: `ssh -T git@github.com`
 
 `Hi bollwarm! You've successfully authenticated, but GitHub does not provide shell access.`
+
+注意测试建实例时候吧git@github.com换成`git@XXX`，XXX为你自己实例服务器的IP地址或者域名。
 
 如果有问题，则你证书生成或者添加有问题。你可以`ssh -vv -T git@IP` 来看详细ssh通讯过程和报错，找出问题。
 
