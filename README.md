@@ -229,7 +229,7 @@ mount sdb  data/gitlab-data
 添加公钥时候添加不是用户账号下证书，而是部署证书（部署证书没有push权限）。 
 
 
-+ 确保你项目目录下.git/config 文件中远程仓deurl是ss链接：git或者ssh开头，而不是http/https开头
++ 确保你项目目录下.git/config 文件中远程仓的URL链接是SSH链接：git或者ssh开头，而不是http/https开头。
 
 + https认证时候可以直接在配置url上配上用户名和密码，这样不用每次操作都输入用户名和密码，格式如下：
 
