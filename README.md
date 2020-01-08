@@ -25,17 +25,17 @@ Gitlab当前版本`12.6`,[功能介绍](https://www.toutiao.com/i677357459142921
 
 #### 历史版本
 
-[Gitlab 12.5](https://www.toutiao.com/a6763129615377531399/)
-[Gitlab 12.4](https://www.toutiao.com/a6750907292096397837/)
-[Gitlab 12.3](https://www.toutiao.com/i6739764193219576333/)
-[Gitlab 12.2](https://www.toutiao.com/i6728249727210488324/)
-[Gitlab 12.1](https://www.toutiao.com/i6717106202813137412/)
-[Gitlab 12.0](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22:%22news_9558965903477159571%22})
+  [Gitlab 12.5](https://www.toutiao.com/a6763129615377531399/)
+  [Gitlab 12.4](https://www.toutiao.com/a6750907292096397837/)
+  [Gitlab 12.3](https://www.toutiao.com/i6739764193219576333/)
+  [Gitlab 12.2](https://www.toutiao.com/i6728249727210488324/)
+  [Gitlab 12.1](https://www.toutiao.com/i6717106202813137412/)
+  [Gitlab 12.0](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22:%22news_9558965903477159571%22})
 
-[Gitlab 11.11](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22:%22news_10069320671135253803%22})
-[Gitlab 11.10](https://www.toutiao.com/i6683306619461173771/)
-[Gitlab 11.9](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9951422023536597182%22})
-[Gitlab 11.8](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9357882608472101547%22})
+  [Gitlab 11.11](https://mbd.baidu.com/newspage/data/landingshare?context={%22nid%22:%22news_10069320671135253803%22})
+  [Gitlab 11.10](https://www.toutiao.com/i6683306619461173771/)
+  [Gitlab 11.9](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9951422023536597182%22})
+  [Gitlab 11.8](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9357882608472101547%22})
   [Gitlab 11.7](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9575778376970300115%22})
   [Gitlab 11.6](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_10397293277319290255%22})
   [Gitlab 11.5](https://mbd.baidu.com/newspage/data/landingshare?&context={%22nid%22:%22news_9560230822959784969%22})
@@ -88,6 +88,53 @@ https://docs.gitlab.com/ce/install/installation.html
 
 ### 2.3 docker安装
 
+```
+sudo docker run --detach \
+  --hostname gitlab.example.com \
+  --publish 443:443 --publish 80:80 --publish 22:22 \
+  --name gitlab \
+  --restart always \
+  --volume /srv/gitlab/config:/etc/gitlab \
+  --volume /srv/gitlab/logs:/var/log/gitlab \
+  --volume /srv/gitlab/data:/var/opt/gitlab \
+  gitlab/gitlab-ce:latest
+```
+增加环境变量，比如external_url和lfs
+```
+sudo docker run --detach \
+  --hostname gitlab.example.com \
+  --env GITLAB_OMNIBUS_CONFIG="external_url 'http://my.domain.com/'; gitlab_rails['lfs_enabled'] = true;" \
+  --publish 443:443 --publish 80:80 --publish 22:22 \
+  --name gitlab \
+  --restart always \
+  --volume /srv/gitlab/config:/etc/gitlab \
+  --volume /srv/gitlab/logs:/var/log/gitlab \
+  --volume /srv/gitlab/data:/var/opt/gitlab \
+  gitlab/gitlab-ce:latest
+```
+docker-compose安装
+
+docker-compose.yml文件示例
+
+```
+web:
+  image: 'gitlab/gitlab-ce:latest'
+  restart: always
+  hostname: 'gitlab.example.com'
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url 'https://gitlab.example.com'
+  ports:
+    - '80:80'
+    - '443:443'
+    - '22:22'
+  volumes:
+    - '/srv/gitlab/config:/etc/gitlab'
+    - '/srv/gitlab/logs:/var/log/gitlab'
+    - '/srv/gitlab/data:/var/opt/gitlab'
+```
+
+详见:
 https://docs.gitlab.com/omnibus/docker/
 
 ### 2.4 典型的Gitlab配置
