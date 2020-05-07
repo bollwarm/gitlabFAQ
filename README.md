@@ -165,7 +165,7 @@ gitlab_rails['gitlab_email_from'] = 'gitYOUdomian'
 
 修改后重加载和重启服务（3.2）
 
-## 3 Gitlab nginx配置（HTPPS支持等）🔨
+## 3 Gitlab nginx配置（HTTPS支持等）🔨
 
 ### 3.1 Gitlab nginx配置
 
@@ -200,6 +200,17 @@ user.save!
 quit
 
 ```
+### 3.4 Gitlab HTTPS配置文档
+
+https://docs.gitlab.com/omnibus/settings/ssl.html
+
+https://docs.gitlab.com/omnibus/settings/nginx.html#manually-configuring-https
+
+https://docs.gitlab.com/runner/configuration/tls-self-signed.html
+
+https问题排查，见本地实例帮助文档：
+
+/help/administration/troubleshooting/ssl.md
 
 ## 4 Gitlab 使用API批量创建分组和项目 🐎
 
