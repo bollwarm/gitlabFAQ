@@ -299,6 +299,21 @@ mount sdb  data/gitlab-data
 
 则服务启动过程较慢，在此期间启动则会导致502，等一段时间，服务启动后，再访问就ok了
 
+#### 升级到13.x后，unicorn配置问题
+
+由于Gitlab 13.0以后，gitlab默认的应用服务器由`unicorn`替换成了`puma`
+如果在gitlab.rb配置文件手动设置过unicorn配置项时候会导致应用服务器（unicorn）起不来
+会导致 502。
+
+注释掉相关unicorn配置，或者unicorn配置项替换为puma。
+然后，重新生成配置，重新启动gitlab即可。
+
+```
+gitlab-ctl reconfig
+gitlab-ctl restart
+```
+
+
 ### 7.2 Git SSH认证问题
 
 #### 很简单的，证书添加后：
