@@ -286,18 +286,31 @@ mount sdb  data/gitlab-data
 
 ### 7.1 错误502解决办法
 
-#### 8080 端口冲突
-
-原因：由于unicorn默认使用的是 8080 端口。
-
-解决办法：打开 /etc/gitlab/gitlab.rb ,去掉 # unicorn['port'] = 8080 的注释，
-将 8080 修改为 9090 ，保存后运行 sudo gitlab-ctl reconfigure 即可。
-
 #### 内存原因
 
-如果内存较小，服务器硬件资源太小
+如果内存较小，服务器硬件资源太小(4G+4G交换分区以下)
 
 则服务启动过程较慢，在此期间启动则会导致502，等一段时间，服务启动后，再访问就ok了
+
+#### 8080 端口冲突
+
+原因：由于`puma`或`unicorn`(gitlab 13.x以下）默认使用的是 8080 端口。
+
+解决办法：打开 `/etc/gitlab/gitlab.rb` ,去掉 `# unicorn['port'] = 8080` 的注释，
+修改为：
+
+```
+puma['port'] = 8080
+```
+
+13.0以前版本：
+
+```
+unicorn['port'] = 8080
+````
+保存后
+
+运行 sudo gitlab-ctl reconfigure 即可。
 
 #### 升级到13.x后，unicorn配置问题
 
