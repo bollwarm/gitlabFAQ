@@ -21,10 +21,11 @@
 
 ### 1.2 Gitlab链接
 
-Gitlab当前版本`13.7`,[功能介绍](https://www.toutiao.com/a6909346512233431555/)
+Gitlab当前版本`13.8`,[功能介绍](https://www.toutiao.com/a6921575220574716428/)
 
 #### 历史版本
 
+  [Gitlab 13.7](https://www.toutiao.com/a6909346512233431555/)
   [Gitlab 13.6](https://www.toutiao.com/a6898192597660008974/)
   [Gitlab 13.5](https://www.toutiao.com/i6886697922809823755/)
   [Gitlab 13.4](https://www.toutiao.com/a6875879061135196675/)
@@ -129,6 +130,7 @@ docker-compose安装
 
 docker-compose.yml文件示例
 
+
 ```
 web:
   image: 'gitlab/gitlab-ce:latest'
@@ -147,7 +149,9 @@ web:
     - '/srv/gitlab/data:/var/opt/gitlab'
 ```
 
+
 详见:
+
 https://docs.gitlab.com/omnibus/docker/
 
 ### 2.4 典型的Gitlab配置
