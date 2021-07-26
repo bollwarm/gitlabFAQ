@@ -21,9 +21,11 @@
 
 ### 1.2 Gitlab链接
 
-Gitlab当前版本`14.0`,[功能介绍](https://www.toutiao.com/i6977564131016770087/)
+Gitlab当前版本`14.1`,[功能介绍](https://www.toutiao.com/w/a6989139524643406374/)
 
 #### 历史版本
+
+  [Gitlab 14.0](https://www.toutiao.com/i6977564131016770087)
 
   [Gitlab 13.12](https://www.toutiao.com/w/a6965796641324433959/)
   [Gitlab 13.11](https://www.toutiao.com/a6954298963407389197/)
