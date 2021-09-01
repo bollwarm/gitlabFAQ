@@ -19,6 +19,8 @@
 
 [交互式Git命令表](https://www.philipdaniels.com/gitcheatsheet/)
 
+[Git 聊天入门(推荐)](http://wkevin.github.io/GitChat/gitchat.html)
+
 ### 1.2 Gitlab链接
 
 Gitlab当前版本`14.2`,[功能介绍](https://www.toutiao.com/a6999833612619497992/)
