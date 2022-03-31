@@ -23,14 +23,18 @@
 
 ### 1.2 Gitlab链接
 
-Gitlab当前版本`14.4`,[功能介绍](https://www.toutiao.com/a7023171234888253963/)
+Gitlab当前版本`14.9`,[功能介绍](https://www.toutiao.com/7078490529490600448/)
 
 #### 历史版本
- 
-  [Gitlab 14.3](https://www.toutiao.com/w/a7010954140998271526/)
+
+  [Gitlab 14.8](https://www.toutiao.com/article/7067752240462889484/)
+  [Gitlab 14.7](https://www.toutiao.com/article/7058652591906882062/)
+  [Gitlab 14.6](https://www.toutiao.com/article/7045071587535602207/)
+  [Gitlab 14.5](https://www.toutiao.com/article/7033954638235746819/)
+  [Gitlab 14.4](https://www.toutiao.com/w/a7023171234888253963/)
   [Gitlab 14.2](https://www.toutiao.com/a6999833612619497992/)
   [Gitlab 14.1](https://www.toutiao.com/w/a6989139524643406374/)
-  [Gitlab 14.0](https://www.toutiao.com/i6977564131016770087)
+  [Gitlab 14.0](https://www.toutiao.com/i6977564131016770087) 
 
   [Gitlab 13.12](https://www.toutiao.com/w/a6965796641324433959/)
   [Gitlab 13.11](https://www.toutiao.com/a6954298963407389197/)
